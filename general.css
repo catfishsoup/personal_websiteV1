@@ -1,0 +1,103 @@
+/* 
+General.css: Contains navigation style and every font-faces 
+*/
+/**************************/
+@font-face {
+    font-family:Gayathri-Bold;
+    src: url(fonts/Gayathri-Bold.ttf)
+}
+
+
+/*************/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+#navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+}
+#navigation-bar ul {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.nav-option {
+    margin: 1em;
+    display: inline;
+}
+
+
+.nav-option > a {
+    font-family: 'Asap', sans-serif;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #631a86;
+}
+
+#mini-nav {
+    display: none;
+}
+
+
+
+footer {
+    background-color: #a2666f;
+    overflow: hidden !important;
+    padding: 3rem;
+    width: 100%;
+    border-top: 1em solid #f49390;
+}
+
+.footer-title {
+    color: white;
+    font-size: 1rem;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-links {
+    display: inline;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#thank-you {
+    font-family: 'Gamja Flower', cursive;
+}
+/* Media Queries */
+@media screen 
+  and (min-device-width: 100px) 
+  and (max-device-width: 1000px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #navigation-bar {
+        display: none;
+    }
+
+    #mini-nav {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1500px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #navigation-bar {
+
+        justify-content: space-between;
+    }
+  }
