@@ -183,14 +183,13 @@ a {
 
 /*******************************************/
 /* Experience Section */
-#experience-container {
-    width: fit-content;
-}
 #exp-container2 {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
 }
+
+
 .job-title {
     font-size: 1.5em;
     font-weight: bold;
@@ -367,32 +366,9 @@ a {
 
 /************/
 /* Media Queries */
-@media screen 
-  and (min-device-width: 100px) 
-  and (max-device-width: 1200px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
 
-    #name-title {
-        font-size: 6em;
-    }
-    #work-list li {
-        width: 15ch;
-    }
-
-    .job-task ul {
-        min-width: 60ch;
-    }
-
-    .job-desc{
-        max-width: 60ch;
-    }
-    .job-task {
-        max-width: 85ch;
-    }
-  }
-
-  @media screen 
-  and (min-device-width: 100px) 
+  @media only screen 
+  and (min-device-width: 900px) 
   and (max-device-width: 1100px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -414,3 +390,36 @@ a {
         max-width: 85ch;
     }
   }
+
+@media only screen 
+and (min-device-width: 600px) 
+and (max-device-width: 900px) {
+    #about-desc {
+        max-width: 50ch;
+    }
+    #work-list {
+        flex-direction: row;
+    }
+    .job-task {
+        max-width: 60ch;
+    }
+
+    #project-container {
+        flex-wrap: wrap;
+    }
+}
+@media only screen 
+and (min-device-width: 100px)
+and (max-device-width: 600px) {
+    #about-desc {
+        max-width: 50ch;
+    }
+    #work-list {
+        flex-direction: row;
+    }
+
+    .job-task {
+        overflow-wrap: break-word;
+        max-width: 50ch;
+    } 
+}
