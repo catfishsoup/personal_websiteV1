@@ -38,7 +38,7 @@ a {
 #name-title {
     font-family: 'Coiny', cursive;
     background: #fff;
-    font-size: clamp(2.5rem, 10vw, 7rem)
+    font-size: clamp(3rem, 10vw, 7rem)
 }
 #name-title:before {
     background: -webkit-linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
@@ -138,6 +138,7 @@ a {
 }
 #selfie {
     overflow: hidden;
+    margin: 1em;
     height: auto;
     border-radius: 50% 70% 50% 70% / 80% 90% 70% 50%;
     box-shadow: 10px 10px 39px -35px rgba(0,0,0,0.64);
@@ -249,6 +250,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
 }
 .project-pic {
     margin: 1em;
