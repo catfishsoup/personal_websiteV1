@@ -1,24 +1,21 @@
 main {
     font-family: 'Asap', sans-serif;
-    font-size: 1em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    min-width: 0;
     gap: 20rem;
 }
-
-/* * {
-    border: 2px dashed red;
-} */
 a {
     text-decoration: none;
 }
 
 .sub-title{
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin: auto;
+    padding: 0.2em;
     color: #f49390;
     font-weight: bold;
 }
@@ -30,6 +27,7 @@ a {
 /* Title section */
 #title-container {
     margin-top: 10rem;
+    padding: 1em;
 }
 
 #title-container > div {
@@ -40,7 +38,7 @@ a {
 #name-title {
     font-family: 'Coiny', cursive;
     background: #fff;
-    font-size: 7em;
+    font-size: clamp(2.5rem, 10vw, 7rem)
 }
 #name-title:before {
     background: -webkit-linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
@@ -125,12 +123,13 @@ a {
 
 /*******************************************/
 /* About Section */
-
 #about-desc, #selfie {
     display: inline-block;
 }
 #about-desc {
     max-width: 100ch;
+    padding: 1em;
+    margin: auto;
 }
 .desc-para {
     display: inline-block;
@@ -139,7 +138,6 @@ a {
 }
 #selfie {
     overflow: hidden;
-    margin: 1em;
     height: auto;
     border-radius: 50% 70% 50% 70% / 80% 90% 70% 50%;
     box-shadow: 10px 10px 39px -35px rgba(0,0,0,0.64);
@@ -180,7 +178,6 @@ a {
 
 
 
-
 /*******************************************/
 /* Experience Section */
 #exp-container2 {
@@ -191,7 +188,7 @@ a {
 
 
 .job-title {
-    font-size: 1.5em;
+    font-size: clamp(1rem, 10vw, 1.5rem);
     font-weight: bold;
     color: #631a86;
 }
@@ -205,7 +202,17 @@ a {
     margin-bottom: -1px;
     border-left: 4px solid rgba(168,168,168, 0.3);
     padding: 1em;
-    width: 20ch;
+    max-width: 20ch;
+}
+
+@media screen 
+and (min-device-width: 100px)
+and (max-device-width: 1100px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    #work-list {
+        flex-direction: row;
+        overflow-x: scroll;
+    }
 }
 
 #work-list li:first-child .active {
@@ -228,6 +235,7 @@ a {
 .job-task {
     line-height: 1.5;
     max-width: 100ch;
+    padding: 1em;
 }
 
 .job-task li {
@@ -238,14 +246,10 @@ a {
 
 /***********************/
 /* Project Section */
-
-#project-container {
-    max-width: 150ch;
-}
 .project {
     display: flex;
     flex-direction: row;
-    flex: 1;
+    border: 2px dashed pink;
 }
 .project-info {
     display: flex;
@@ -253,18 +257,21 @@ a {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    flex-shrink: 2;
+    margin: 1em;
+    border: 2px dashed plum;
 }
 
 .project-pic {
-    margin-left: 1em;
+    margin: 1em;
     border-radius: 10px;
     box-shadow: 10px 11px 80px -52px rgba(0,0,0,0.75);
     display: inline-block;
-    height: auto;
     max-width: calc(100% - 20px);
-    flex-shrink: 1;
+    border: 2px solid red;
 }
+
+
+
 .project-title {
     font-family: 'Asap', sans-serif;
     font-size: 1.5em;
@@ -325,6 +332,7 @@ a {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    padding: 1em;
 }
 #contact-desc {
     margin-bottom: 2em;
@@ -366,60 +374,3 @@ a {
 
 /************/
 /* Media Queries */
-
-  @media only screen 
-  and (min-device-width: 900px) 
-  and (max-device-width: 1100px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    #name-title {
-        font-size: 6em;
-    }
-    #work-list li {
-        width: 15ch;
-    }
-
-    .job-task ul {
-        min-width: 60ch;
-    }
-
-    .job-desc{
-        max-width: 60ch;
-    }
-    .job-task {
-        max-width: 85ch;
-    }
-  }
-
-@media only screen 
-and (min-device-width: 600px) 
-and (max-device-width: 900px) {
-    #about-desc {
-        max-width: 50ch;
-    }
-    #work-list {
-        flex-direction: row;
-    }
-    .job-task {
-        max-width: 60ch;
-    }
-
-    #project-container {
-        flex-wrap: wrap;
-    }
-}
-@media only screen 
-and (min-device-width: 100px)
-and (max-device-width: 600px) {
-    #about-desc {
-        max-width: 50ch;
-    }
-    #work-list {
-        flex-direction: row;
-    }
-
-    .job-task {
-        overflow-wrap: break-word;
-        max-width: 50ch;
-    } 
-}
