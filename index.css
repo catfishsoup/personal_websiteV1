@@ -6,7 +6,6 @@ main {
     justify-content: center;
     align-items: center;
     min-width: 0;
-    gap: 20rem;
 }
 a {
     text-decoration: none;
@@ -25,8 +24,8 @@ a {
 
 /*******************************************/
 /* Title section */
-#title-container {
-    margin-top: 10rem;
+#title-container, #about-container, #contact-container {
+    margin-bottom: 20rem;
     padding: 1em;
 }
 
@@ -185,6 +184,7 @@ a {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
+    margin-bottom: 20rem;
 }
 
 
@@ -329,7 +329,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-family: 'Blinker', sans-serif;
 }
 
-
+#view-more {
+    margin-bottom: 20rem;
+}
 /***********************/
 /* Contact Section */
 #contact-container {
@@ -342,10 +344,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 #contact-desc {
     margin-bottom: 2em;
-    text-align: center;
+    padding: 1em;
+    margin: 0;
+    gap: 0;
 }
 
-#btn {
+.btn {
     font-family: 'Asap', sans-serif;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -356,11 +360,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
     transition: 0.5s ease;
 }
 
-#btn > a {
+.btn > a {
     color: white;
 }
 
-#btn:hover {
+.btn:hover {
     animation: gradient 10s ease infinite;
     transform: translate(0px, 10px);
 }

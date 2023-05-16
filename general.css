@@ -52,8 +52,8 @@ General.css: Contains navigation style and every font-faces
 footer {
     background-color: #a2666f;
     overflow: hidden !important;
-    padding: 3rem;
-    width: calc(100% - 100px);
+    padding: 2rem;
+    width: 100vw;
     border-top: 1em solid #f49390;
 }
 
