@@ -286,9 +286,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
     color: #631a86;
     transition: 0.5s;
 }
-.project-title > a:hover {
+/* .project-title > a:hover {
     color: #f45866;
-}
+} */
 .project-desc {
     line-height: 1.5;
     max-width: 50ch;
