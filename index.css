@@ -5,7 +5,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 0;
 }
 a {
     text-decoration: none;
@@ -25,7 +24,12 @@ a {
 /*******************************************/
 /* Title section */
 #title-container {
-    margin: 20rem;
+    display: inline-block;
+    margin-top: 20rem;
+    height: 75vh;
+    width: fit-content;
+    padding: 1em;
+    
 }
 #about-container, #contact-container {
     margin-bottom: 20rem;
@@ -40,7 +44,7 @@ a {
 #name-title {
     font-family: 'Coiny', cursive;
     background: #fff;
-    font-size: clamp(3rem, 10vw, 7rem)
+    font-size: clamp(4rem, 10vw, 7rem);
 }
 #name-title:before {
     background: -webkit-linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
@@ -140,8 +144,7 @@ a {
 }
 #selfie {
     overflow: hidden;
-    margin: 1em;
-    height: auto;
+    border: 2px solid red;
     border-radius: 50% 70% 50% 70% / 80% 90% 70% 50%;
     box-shadow: 10px 10px 39px -35px rgba(0,0,0,0.64);
     animation: blobs 45s ease-in-out infinite alternate;
@@ -348,8 +351,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 #contact-desc {
     margin-bottom: 2em;
     padding: 1em;
-    margin: 0;
-    gap: 0;
 }
 
 .btn {
@@ -387,3 +388,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /************/
 /* Media Queries */
+@media screen 
+  and (min-device-width: 100px) 
+  and (max-device-width: 1400px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    main {
+        display: block;
+        margin: 1em;
+    }
+  }

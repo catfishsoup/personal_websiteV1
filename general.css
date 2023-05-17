@@ -10,8 +10,8 @@ General.css: Contains navigation style and every font-faces
 
 /*************/
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     scroll-behavior: smooth;
     overflow-x: hidden;
     word-wrap: break-word;
