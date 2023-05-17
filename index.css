@@ -24,7 +24,10 @@ a {
 
 /*******************************************/
 /* Title section */
-#title-container, #about-container, #contact-container {
+#title-container {
+    margin: 20rem;
+}
+#about-container, #contact-container {
     margin-bottom: 20rem;
     padding: 1em;
 }
