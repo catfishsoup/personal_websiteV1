@@ -1,4 +1,10 @@
-main {
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+
+#home-page {
     font-family: 'Asap', sans-serif;
     display: flex;
     flex-direction: column;
@@ -144,7 +150,9 @@ a {
 }
 #selfie {
     overflow: hidden;
-    border: 2px solid red;
+    height: auto;
+    width: auto;
+    max-width: 100%;
     border-radius: 50% 70% 50% 70% / 80% 90% 70% 50%;
     box-shadow: 10px 10px 39px -35px rgba(0,0,0,0.64);
     animation: blobs 45s ease-in-out infinite alternate;
@@ -351,6 +359,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 #contact-desc {
     margin-bottom: 2em;
     padding: 1em;
+    text-align: center;
 }
 
 .btn {

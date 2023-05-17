@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+
+#project-title {
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Asap', sans-serif;
+}
+table {
+    margin-top: 2rem;
+    border: 2px solid red;
+}
+th {
+    text-align: start;
+    padding: 1em;
+}
+#content {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+td a {
+    margin: 5px;
+    color: black;
+}
+
+
+td:nth-child(3) ul >  li {
+    display: inline;
+    margin-right: 2px;
+    font-size: 0.9rem;
+    font-family: 'Blinker', sans-serif;
+}
+
+td:nth-child(3) ul >  li:not(:last-child)::after {
+   content: " ⋄ "
+}
