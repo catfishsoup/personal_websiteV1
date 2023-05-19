@@ -148,6 +148,15 @@ a {
     line-height: 1.5;
     margin-bottom: 1em;
 }
+/* #selfie {
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    border-radius: 50% 70% 50% 70% / 80% 90% 70% 50%;
+    box-shadow: 10px 10px 39px -35px rgba(0,0,0,0.64);
+    animation: blobs 45s ease-in-out infinite alternate;
+} */
 
 #skill-lists {
     display: flex;
