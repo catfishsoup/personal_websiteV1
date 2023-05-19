@@ -18,7 +18,6 @@ main {
 }
 table {
     margin-top: 2rem;
-    border: 2px solid red;
 }
 th {
     text-align: start;
@@ -38,6 +37,10 @@ td a {
     color: black;
 }
 
+td a:hover {
+ color: #f45866;
+}
+
 
 td:nth-child(3) ul >  li {
     display: inline;
@@ -48,4 +51,31 @@ td:nth-child(3) ul >  li {
 
 td:nth-child(3) ul >  li:not(:last-child)::after {
    content: " ⋄ "
+}
+
+
+/**/
+#folders > div {
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1em;
+    width: calc(20ch);
+    background-color: rgba(162, 102, 111, 0.2);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+#folders > div:hover {
+    background-color: rgba(162, 102, 111, 0.5);
+    cursor: pointer;
+}
+
+#folders > div > span {
+    display: inline-block;
+    
+}
+#folders > div::before {
+    content: url(../img/folder-broken.svg);
 }
