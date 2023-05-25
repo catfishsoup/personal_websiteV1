@@ -2,26 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
-
-#project-title {
-    font-family: 'Asap', sans-serif;
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: min(150ch, 100% - 4rem);
     font-family: 'Asap', sans-serif;
+    margin-inline: auto;
+    padding: 1rem;
 }
 table {
     margin-top: 2rem;
+    width: 100%;
+}
+
+#project-title {
+    font-family: 'Asap', sans-serif;
+    text-align: left;
+    font-size: 5rem;
+    padding-bottom: 20px;
+    color: #f49390;
 }
 th {
     text-align: start;
     padding: 1em;
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid #a2666f;
 }
 #content {
     border-collapse: collapse;
@@ -30,11 +35,12 @@ th {
 td {
     padding: 1rem;
     margin: 1rem;
+    border-bottom: 1px solid #a2666f;
 }
 
 td a {
     margin: 5px;
-    color: black;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 td a:hover {
@@ -45,8 +51,8 @@ td a:hover {
 td:nth-child(3) ul >  li {
     display: inline;
     margin-right: 2px;
-    font-size: 0.9rem;
-    font-family: 'Blinker', sans-serif;
+    font-size: small;
+    font-family: 'Courier Prime', monospace;
 }
 
 td:nth-child(3) ul >  li:not(:last-child)::after {
@@ -55,20 +61,35 @@ td:nth-child(3) ul >  li:not(:last-child)::after {
 
 
 /**/
-#folders > div {
-    display: inline-block;
-    position: relative;
+#folders {
+    display: flex;
+    flex-direction: row;
+}
+.sub-folder {
+    display: flex;
     padding: 1rem;
+    gap: 5px;
     border-radius: 1rem;
     margin: 1em;
-    width: calc(20ch);
+    width: 15%;
     background-color: rgba(162, 102, 111, 0.2);
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    transition: 0.5s;
     
 }
-#folders > div:hover {
-    background-color: rgba(162, 102, 111, 0.5);
+.sub-folder > span {
+    text-align: center;
+    padding-top: 5px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sub-folder > img {
+    flex-shrink: 0;
+}
+.sub-folder:hover {
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 2px 1px rgba(99, 26, 134, 0.1);
     cursor: pointer;
 }
 
@@ -76,6 +97,10 @@ td:nth-child(3) ul >  li:not(:last-child)::after {
     display: inline-block;
     
 }
-#folders > div::before {
-    content: url(../img/folder-broken.svg);
+#view-options > button {
+    border: 1px solid gray;
+    float: right;
+    background: none;
+    width: 10ch;
+    padding: 0.5em;
 }
