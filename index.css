@@ -261,6 +261,16 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /***********************/
 /* Project Section */
+#project-container > .sub-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#view-more {
+    margin-top: 1.3em;
+    color: black;
+    font-size: 1rem;
+}
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -343,9 +353,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-family: 'Blinker', sans-serif;
 }
 
-#view-more {
-    margin-bottom: 20rem;
-}
 /***********************/
 /* Contact Section */
 #contact-container {
